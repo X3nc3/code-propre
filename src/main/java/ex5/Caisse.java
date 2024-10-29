@@ -25,6 +25,10 @@ public class Caisse {
 		return item.getPoids()>= poidsItemMin && item.getPoids()<=poidsItemMax;
 	}
 
+	public int taille() {
+		return items.size();
+	}
+
 	/** Getter pour l'attribut nom
 	 * @return the nom
 	 */

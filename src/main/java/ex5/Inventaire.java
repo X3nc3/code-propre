@@ -24,7 +24,10 @@ public class Inventaire {
 	}
 
 	public int taille() {
-		
+		int somme = 0;
+		for (Caisse caisse : caisses) {
+			somme += caisse.taille();
+		}
 		//TODO faites évoluer ce code.
 		return caisses.get(0).getItems().size() + caisses.get(1).getItems().size() + caisses.get(2).getItems().size();
 	}
