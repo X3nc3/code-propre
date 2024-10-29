@@ -1,49 +1,48 @@
 package ex3;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class Zoo {
+    private String nom;
+    private ArrayList<Animal> animaux = new ArrayList<Animal>();
 
-	private String nom;
-	private SavaneAfricaine savaneAfricaine;
-	private ZoneCarnivore zoneCarnivore;
-	private FermeReptile fermeReptile;
-	private Aquarium aquarium;
-	
-	public Zoo(String nom){
-		this.nom = nom;
-	}
-	
-	public void addAnimal(String nomAnimal, String typeAnimal, String comportement){
-		if (typeAnimal.equals("MAMMIFERE") && comportement.equals("CARNIVORE")){
-			zoneCarnivore.addAnimal(typeAnimal, nomAnimal, comportement);
-		}
-		else if (typeAnimal.equals("MAMMIFERE") && comportement.equals("HERBIVORE")){
-			savaneAfricaine.addAnimal(typeAnimal, nomAnimal, comportement);
-		}
-		else if (typeAnimal.equals("REPTILE")){
-			fermeReptile.addAnimal(typeAnimal, nomAnimal, comportement);
-		}
-		else if (typeAnimal.equals("POISSON")){
-			aquarium.addAnimal(typeAnimal, nomAnimal, comportement);
-		}
-	}
-	
-	public void afficherListeAnimaux(){
-		savaneAfricaine.afficherListeAnimaux();
-		zoneCarnivore.afficherListeAnimaux();
-		fermeReptile.afficherListeAnimaux();
-		aquarium.afficherListeAnimaux();
-	}
+    /**
+     * Constructeur zoo
+     * @param nom
+     */
+    public Zoo(String nom) {
+        this.nom = nom;
+    }
 
-	/** Getter for nom
-	 * @return the nom
-	 */
-	public String getNom() {
-		return nom;
-	}
+    /**
+     * Méthode d'ajouts des caracteristiques dans les listes respectife
+     * @param animal
+     */
+    public void addAnimal(Animal animal) {
+        animaux.add(animal);
+    }
 
-	/** Setter
-	 * @param nom the nom to set
-	 */
-	public void setNom(String nom) {
-		this.nom = nom;
-	}
+    /**
+     * Méthode pour afficher les caracteristiques des animeaux
+     */
+    public void afficherListeAnimaux() {
+        for (int i = 0; i < animaux.size(); i++) {
+            System.out.println(animaux.get(i));
+        }
+    }
+
+    /**
+     * Getter for nom     * @return the nom
+     */
+    public String getNom() {
+        return nom;
+    }
+
+    /**
+     * Setter     * @param nom the nom to set
+     */
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
 }

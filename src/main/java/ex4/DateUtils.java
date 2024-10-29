@@ -12,8 +12,6 @@ public class DateUtils {
 	}
 	
 	public static String formatDefaut(Date date) {
-		
-		SimpleDateFormat formateur = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
-		return formateur.format(date);
+		return format("dd/MM/yyyy HH:mm:ss", date);
 	}
 }
