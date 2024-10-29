@@ -7,7 +7,7 @@ public class Calcul {
 	 * @param b entier 2
 	 * @return int
 	 */
-	public int addition(int a, int b){
+	public static int addition(int a, int b){
 		return a+b;
 	}
 
@@ -16,7 +16,7 @@ public class Calcul {
 	 * @param b entier 2
 	 * @return int
 	 */
-	public int soustraction(int a, int b){
+	public static int soustraction(int a, int b){
 		return a-b;
 	}
 }

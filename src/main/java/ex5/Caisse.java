@@ -6,15 +6,23 @@ import java.util.List;
 public class Caisse {
 
 	private String nom;
+	private int poidsItemMin;
+	private int poidsItemMax;
 	private List<Item> items;
 
 	/** Constructeur
 	 * @param nom
 	 */
-	public Caisse(String nom) {
+	public Caisse(String nom, int poidsItemMin, int poidsItemMax) {
 		super();
 		this.nom = nom;
 		this.items = new ArrayList<>();
+		this.poidsItemMin = poidsItemMin;
+		this.poidsItemMax = poidsItemMax;
+	}
+
+	public boolean accepte(Item item) {
+		return item.getPoids()>= poidsItemMin && item.getPoids()<=poidsItemMax;
 	}
 
 	/** Getter pour l'attribut nom

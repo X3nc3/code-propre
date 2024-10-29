@@ -1,27 +1,28 @@
 package ex1;
 
 import java.util.Date;
+
 /** Classe qui permet d'instencier l'objet entreprise
  */
 public class Entreprise {
 
-	/** Variable d'environement privé qui contient un entier et represente le numero siret de l'entreprise */
+	/** entier represente le numero siret */
 	private int siret;
 
-	/** Variable d'environement privé qui contient une chaine de carctere et represente le nom de l'entreprise */
+	/** chaine de carctere representant le nom */
 	private String nom;
 
-	/** Variable d'environement privé qui contient une chaine de carctere et represente l'adresse de l'entreprise */
+	/** chaine de carctere representant l'adresse */
 	private String adresse;
 
-	/** Variable d'environement privé qui contient une date et represente la date de creation de l'entreprise */
+	/** date representant la date de creation de l'entreprise */
 	private Date dateCreation;
 
-	/** Constante public qui contient un entier et represente le capital max de l'entreprise */
+	/** entier representant le capital max de l'entreprise */
 	public static final int CAPITAL_MAX = 3000000;
 
-	/** Méthode public qui ne retourne rien et qui affiche le statut de l'entreprise  */
-	public void AfficherStatut(){
+	/** affiche le statut de l'entreprise  */
+	public void afficherStatut(){
 		/** affichage des attributs de l'entreprise*/
 		System.out.println(siret + nom + adresse + dateCreation);
 	}

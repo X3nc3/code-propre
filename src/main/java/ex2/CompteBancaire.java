@@ -25,16 +25,6 @@ public class CompteBancaire {
 		this.solde = solde;
 		this.decouvert = decouvert;
 	}
-
-	/** Ce constructeur est utilisé pour créer un compte de type Livret A
-	 * @param type = LA
-	 * @param solde représente le solde du compte
-	 */
-	public CompteBancaire(String type, double solde) {
-		super();
-		this.type = type;
-		this.solde = solde;
-	}
 	
 	/** Ajoute un crédit au solde
 	 * @param montant
@@ -47,16 +37,9 @@ public class CompteBancaire {
 	 * @param montant
 	 */
 	public void debiterMontant(double montant){
-		if (type.equals("CC")){
 			if (this.solde - montant > decouvert){
 				this.solde = solde - montant;
-			}	
-		}
-		else if (type.equals("LA")){
-			if (this.solde - montant > 0){
-				this.solde = solde - montant;
-			}	
-		}
+			}
 	}
 	
 	/** Getter for solde
